@@ -62,24 +62,32 @@
       <!-- ============ MAIN COLUMN ============ -->
       <div class="dashboard-main">
 
-        <!-- ============ SEARCH SECTION ============ -->
-        <section class="panel search-panel">
-          <h2 class="panel__title">What do you need help with?</h2>
-          <p class="panel__subtitle">Search for freelancers by skill, domain, or expertise.</p>
+      <!-- ============ FREELANCER SEARCH ============ -->
+<section class="search-section">
+    <div class="search-section__header">
+        <h2>What do you need help with?</h2>
+        <p>Search for freelancers by skill, domain, or expertise.</p>
+    </div>
 
-          <form class="search-bar" action="#" method="get">
-            <span class="search-bar__icon" aria-hidden="true">🔍</span>
-            <input
-              type="text"
-              class="search-bar__input"
-              name="query"
-              placeholder='Search &quot;Web Development&quot;, &quot;UI/UX&quot;, &quot;Python&quot;...'
-            />
-            <button type="submit" class="btn-primary search-bar__btn">
-              <span>Search Freelancers</span>
-            </button>
-          </form>
+    <form class="search-bar">
+        <input
+            type="text"
+            class="search-bar__input"
+            placeholder='Search "Web Development", "UI/UX", "Python"...'
+        >
 
+        <button type="submit" class="btn-primary search-bar__btn">
+            Search Freelancers
+        </button>
+    </form>
+</section>
+
+<!-- ============ SEARCH RESULTS ============ -->
+<section class="panel search-results">
+    <h2 class="panel__title">Search Results</h2>
+
+    <div class="freelancer-grid"></div>
+</section>
           <!-- ============ POPULAR DOMAINS ============ -->
           <div class="domains">
             <h3 class="domains__title">Explore Popular Domains</h3>
@@ -105,7 +113,7 @@
                 <span class="domain-chip__label">UI/UX Design</span>
               </a>
 
-              <a href="#" class="domain-chip">
+              <a href="#" class="domain-chip" data-domain="Web Development">
                 <span class="domain-chip__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="7" y="2" width="10" height="20" rx="2"></rect>
@@ -383,5 +391,6 @@
     </div>
   </footer>
 
+<script src="customer-dashboard.js"></script>
 </body>
 </html>
