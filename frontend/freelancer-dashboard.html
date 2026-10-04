@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- ============ ANIMATED BACKGROUND LAYERS (matches login/register/customer-dashboard) ============ -->
+  <!-- ============ ANIMATED BACKGROUND ============ -->
   <div class="bg">
     <div class="bg__grid"></div>
     <div class="bg__glow bg__glow--primary"></div>
@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <!-- ============ TOP NAVIGATION (sticky) ============ -->
+  <!-- ============ TOP NAVIGATION ============ -->
   <header class="navbar">
     <div class="navbar__logo">
       <img class="navbar__logo-mark" src="fh-icon.png" alt="Freelancer Hub" />
@@ -32,7 +32,7 @@
 
     <nav class="navbar__links">
       <a href="freelancer-dashboard.html" class="navbar__link is-active">Dashboard</a>
-      <a href="#" class="navbar__link">My Profile</a>
+      <a href="freelancer-profile.html" class="navbar__link">My Profile</a>
       <a href="#portfolio" class="navbar__link">Portfolio</a>
       <a href="messages.html" class="navbar__link">Messages</a>
     </nav>
@@ -42,23 +42,30 @@
         <span aria-hidden="true">🔔</span>
         <span class="navbar__badge">3</span>
       </a>
-      <a href="#" class="navbar__icon-btn navbar__icon-btn--profile" aria-label="Profile">
+
+      <a href="freelancer-profile.html" class="navbar__icon-btn navbar__icon-btn--profile" aria-label="Profile">
         <span aria-hidden="true">👤</span>
         <span class="navbar__profile-label">Profile</span>
       </a>
+
       <a href="login.html" class="navbar__logout">Logout</a>
     </div>
   </header>
+
 
   <main class="dashboard">
 
     <!-- ============ WELCOME SECTION ============ -->
     <section class="welcome">
-      <h1 class="welcome__title">Welcome back, [Freelancer Name] 👋</h1>
-      <p class="welcome__subtitle">Manage your profile, showcase your skills, and connect with potential customers.</p>
+      <h1 class="welcome__title">Welcome back, Neha Kulkarni 👋</h1>
+
+      <p class="welcome__subtitle">
+        Manage your profile, showcase your skills, and connect with potential customers.
+      </p>
     </section>
 
-    <!-- ============ STATUS ROW: Profile Completion + Availability + Visibility ============ -->
+
+    <!-- ============ STATUS ROW ============ -->
     <section class="status-row">
 
       <!-- Profile completion -->
@@ -75,10 +82,15 @@
           </div>
         </div>
 
-        <p class="status-card__hint">Complete your profile to improve your visibility to customers.</p>
+        <p class="status-card__hint">
+          Complete your profile to improve your visibility to customers.
+        </p>
 
-        <a href="#" class="btn-primary btn-block">Complete Profile</a>
+        <a href="#profile-info" class="btn-primary btn-block">
+          Complete Profile
+        </a>
       </div>
+
 
       <!-- Availability -->
       <div class="status-card status-card--availability">
@@ -89,11 +101,19 @@
           <span class="availability-display__label">AVAILABLE</span>
         </div>
 
-        <p class="status-card__hint">Customers can currently contact you.</p>
-        <p class="status-card__meta">Last updated: Today</p>
+        <p class="status-card__hint">
+          Customers can currently contact you.
+        </p>
 
-        <a href="#" class="btn-secondary btn-block">Change Availability</a>
+        <p class="status-card__meta">
+          Last updated: Today
+        </p>
+
+        <a href="#profile-info" class="btn-secondary btn-block">
+          Change Availability
+        </a>
       </div>
+
 
       <!-- Profile visibility -->
       <div class="status-card status-card--visibility">
@@ -101,235 +121,400 @@
 
         <div class="visibility-display">
           <span class="availability-dot" aria-hidden="true"></span>
-          <span class="visibility-display__label">Your profile is visible</span>
+          <span class="visibility-display__label">
+            Your profile is visible
+          </span>
         </div>
 
-        <p class="status-card__hint">Customers can find your profile in freelancer searches.</p>
+        <p class="status-card__hint">
+          Customers can find your profile in freelancer searches.
+        </p>
 
-        <a href="#" class="btn-secondary btn-block">Manage Visibility</a>
+        <a href="freelancer-profile.html" class="btn-secondary btn-block">
+          View Profile
+        </a>
       </div>
 
     </section>
+
 
     <!-- ============ QUICK STATISTICS ============ -->
     <section class="stats-row">
 
       <div class="stat-card">
-        <span class="stat-card__value">⭐ 4.8</span>
+        <span class="stat-card__value">⭐ 4.5</span>
         <span class="stat-card__label">Rating</span>
       </div>
 
       <div class="stat-card">
-        <span class="stat-card__value">24</span>
+        <span class="stat-card__value">2</span>
         <span class="stat-card__label">Reviews</span>
       </div>
 
       <div class="stat-card">
-        <span class="stat-card__value">3</span>
+        <span class="stat-card__value">2</span>
         <span class="stat-card__label">Projects</span>
       </div>
 
       <div class="stat-card">
-        <span class="stat-card__value">12</span>
-        <span class="stat-card__label">Profile Views</span>
+        <span class="stat-card__value">3</span>
+        <span class="stat-card__label">Years Experience</span>
       </div>
 
     </section>
+
 
     <!-- ============ SKILLS + PROFESSIONAL INFORMATION ============ -->
     <section class="info-row">
 
-      <!-- Skills — will eventually be populated from the Skills table -->
+      <!-- Skills -->
       <div class="panel skills-panel">
         <h2 class="panel__title">Your Skills</h2>
 
         <div class="skills-list">
-          <span class="skill-tag">HTML</span>
-          <span class="skill-tag">CSS</span>
-          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Java</span>
           <span class="skill-tag">React</span>
-          <span class="skill-tag">Node.js</span>
           <span class="skill-tag">MySQL</span>
-          <a href="#" class="skill-tag skill-tag--add">+ Add Skill</a>
+
+          <a href="#skills" class="skill-tag skill-tag--add">
+            + Add Skill
+          </a>
         </div>
       </div>
 
-      <!-- Professional information — will eventually come from the Freelancer table -->
-      <div class="panel info-panel">
-        <h2 class="panel__title">Professional Information</h2>
+
+      <!-- Professional information -->
+      <div class="panel info-panel" id="profile-info">
+
+        <h2 class="panel__title">
+          Professional Information
+        </h2>
 
         <dl class="info-list">
+
           <div class="info-list__row">
             <dt>Professional Title</dt>
-            <dd>Full Stack Web Developer</dd>
+            <dd>Full Stack Developer</dd>
           </div>
+
           <div class="info-list__row">
             <dt>Domain</dt>
             <dd>Web Development</dd>
           </div>
+
           <div class="info-list__row">
             <dt>Experience</dt>
             <dd>3 Years</dd>
           </div>
+
           <div class="info-list__row">
             <dt>Hourly Rate</dt>
-            <dd>₹500 / hour</dd>
+            <dd>₹800 / hour</dd>
           </div>
+
+          <div class="info-list__row">
+            <dt>Availability</dt>
+            <dd>Available</dd>
+          </div>
+
         </dl>
 
-        <a href="#" class="btn-secondary btn-block">Edit Profile</a>
+        <a href="freelancer-profile.html" class="btn-secondary btn-block">
+          View / Edit Profile
+        </a>
+
       </div>
 
     </section>
 
-    <!-- ============ PORTFOLIO — will eventually come from the Portfolio table ============ -->
+
+    <!-- ============ PORTFOLIO ============ -->
     <section class="panel portfolio-panel" id="portfolio">
+
       <div class="panel__head">
+
         <div>
           <h2 class="panel__title">My Portfolio</h2>
-          <p class="panel__subtitle">Projects you&rsquo;ve delivered for previous clients</p>
+
+          <p class="panel__subtitle">
+            Projects you've delivered for previous clients
+          </p>
         </div>
-        <a href="#" class="btn-primary portfolio-panel__add">+ Add New Project</a>
+
+        <a href="#add-project" class="btn-primary portfolio-panel__add">
+          + Add New Project
+        </a>
+
       </div>
+
 
       <div class="portfolio-grid">
 
+        <!-- Project 1 -->
         <article class="portfolio-card">
-          <h3 class="portfolio-card__title">E-Commerce Website</h3>
+
+          <h3 class="portfolio-card__title">
+            E-Commerce Website
+          </h3>
+
           <div class="portfolio-card__tags">
+            <span class="skill-tag">Java</span>
             <span class="skill-tag">React</span>
-            <span class="skill-tag">Node.js</span>
             <span class="skill-tag">MySQL</span>
           </div>
-          <p class="portfolio-card__desc">Modern e-commerce platform with user authentication and product management.</p>
-          <a href="#" class="btn-secondary btn-block">View Project</a>
+
+          <p class="portfolio-card__desc">
+            Developed a full-stack online shopping website using Java,
+            React and MySQL.
+          </p>
+
+          <a
+            href="https://github.com/demo/neha-ecommerce"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-secondary btn-block"
+          >
+            View Project
+          </a>
+
         </article>
 
-        <article class="portfolio-card">
-          <h3 class="portfolio-card__title">Company Website</h3>
-          <div class="portfolio-card__tags">
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">JavaScript</span>
-          </div>
-          <p class="portfolio-card__desc">Responsive corporate website built for a growing local business.</p>
-          <a href="#" class="btn-secondary btn-block">View Project</a>
-        </article>
 
+        <!-- Project 2 -->
         <article class="portfolio-card">
-          <h3 class="portfolio-card__title">Analytics Dashboard</h3>
+
+          <h3 class="portfolio-card__title">
+            Task Management App
+          </h3>
+
           <div class="portfolio-card__tags">
-            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">React</span>
             <span class="skill-tag">MySQL</span>
           </div>
-          <p class="portfolio-card__desc">Interactive business analytics dashboard with live data visualizations.</p>
-          <a href="#" class="btn-secondary btn-block">View Project</a>
+
+          <p class="portfolio-card__desc">
+            Built a task management application with user authentication
+            and database integration.
+          </p>
+
+          <a
+            href="https://github.com/demo/neha-taskapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-secondary btn-block"
+          >
+            View Project
+          </a>
+
         </article>
 
       </div>
+
     </section>
 
-    <!-- ============ OPPORTUNITIES FOR YOU (future ML integration point) ============
-         Isolated section so a future recommendation model (skills, domain,
-         experience, rating, previous work) can populate it independently. -->
+
+    <!-- ============ OPPORTUNITIES ============ -->
     <section class="panel opportunities-panel" id="opportunities-for-you">
-      <h2 class="panel__title">✦ Opportunities For You</h2>
+
+      <h2 class="panel__title">
+        ✦ Opportunities For You
+      </h2>
+
       <div class="opportunities-empty">
-        <p>Personalized opportunities will appear here.</p>
+        <p>
+          Personalized opportunities will appear here.
+        </p>
       </div>
+
     </section>
+
 
     <!-- ============ MESSAGES + REVIEWS + NOTIFICATIONS ============ -->
     <section class="engagement-row">
 
-      <!-- Recent messages — will eventually come from the Message table -->
+      <!-- Recent messages -->
       <div class="widget">
-        <h3 class="widget__title">Recent Messages</h3>
+
+        <h3 class="widget__title">
+          Recent Messages
+        </h3>
 
         <ul class="message-list">
+
           <li class="message-item">
-            <p class="message-item__sender">Rahul Sharma</p>
-            <p class="message-item__preview">I need a website for my company...</p>
-            <span class="message-item__time">5 min ago</span>
+            <p class="message-item__sender">
+              Customer
+            </p>
+
+            <p class="message-item__preview">
+              I need a website for my company...
+            </p>
+
+            <span class="message-item__time">
+              5 min ago
+            </span>
           </li>
+
           <li class="message-item">
-            <p class="message-item__sender">Priya Patil</p>
-            <p class="message-item__preview">Are you available for a project?</p>
-            <span class="message-item__time">1 hour ago</span>
+            <p class="message-item__sender">
+              Customer
+            </p>
+
+            <p class="message-item__preview">
+              Are you available for a project?
+            </p>
+
+            <span class="message-item__time">
+              1 hour ago
+            </span>
           </li>
-          <li class="message-item">
-            <p class="message-item__sender">Nims Corporation</p>
-            <p class="message-item__preview">Can we discuss the requirements?</p>
-            <span class="message-item__time">Yesterday</span>
-          </li>
+
         </ul>
 
-        <a href="messages.html" class="widget__link">View All Messages →</a>
+        <a href="messages.html" class="widget__link">
+          View All Messages →
+        </a>
+
       </div>
 
-      <!-- Recent reviews — will eventually come from the Review table -->
+
+      <!-- Recent reviews -->
       <div class="widget">
-        <h3 class="widget__title">Recent Reviews</h3>
+
+        <h3 class="widget__title">
+          Recent Reviews
+        </h3>
 
         <ul class="review-list">
+
           <li class="review-item">
-            <span class="review-item__stars">⭐⭐⭐⭐⭐</span>
-            <p class="review-item__quote">&ldquo;Excellent work and communication.&rdquo;</p>
-            <span class="review-item__author">— Customer</span>
+
+            <span class="review-item__stars">
+              ⭐⭐⭐⭐⭐
+            </span>
+
+            <p class="review-item__quote">
+              "Excellent work and communication."
+            </p>
+
+            <span class="review-item__author">
+              — Customer
+            </span>
+
           </li>
+
           <li class="review-item">
-            <span class="review-item__stars">⭐⭐⭐⭐</span>
-            <p class="review-item__quote">&ldquo;Very good developer and delivered on time.&rdquo;</p>
-            <span class="review-item__author">— Customer</span>
+
+            <span class="review-item__stars">
+              ⭐⭐⭐⭐
+            </span>
+
+            <p class="review-item__quote">
+              "Very good developer and delivered on time."
+            </p>
+
+            <span class="review-item__author">
+              — Customer
+            </span>
+
           </li>
+
         </ul>
 
-        <a href="#" class="widget__link">View All Reviews →</a>
+        <a href="reviews.html" class="widget__link">
+          View All Reviews →
+        </a>
+
       </div>
 
-      <!-- Notifications preview — will eventually come from the Notification table -->
+
+      <!-- Notifications -->
       <div class="widget">
-        <h3 class="widget__title">🔔 Notifications</h3>
+
+        <h3 class="widget__title">
+          🔔 Notifications
+        </h3>
 
         <ul class="activity-list">
+
           <li class="activity-item">
+
             <span class="activity-item__dot"></span>
-            New message from Nims
-            <span class="activity-item__time">5 minutes ago</span>
+
+            New message received
+
+            <span class="activity-item__time">
+              5 minutes ago
+            </span>
+
           </li>
+
           <li class="activity-item">
+
             <span class="activity-item__dot"></span>
+
             You received a 5-star review
-            <span class="activity-item__time">1 hour ago</span>
+
+            <span class="activity-item__time">
+              1 hour ago
+            </span>
+
           </li>
+
           <li class="activity-item">
+
             <span class="activity-item__dot"></span>
+
             Your profile was viewed
-            <span class="activity-item__time">Today</span>
+
+            <span class="activity-item__time">
+              Today
+            </span>
+
           </li>
+
         </ul>
 
-        <a href="notifications.html" class="widget__link">View All →</a>
+        <a href="notifications.html" class="widget__link">
+          View All →
+        </a>
+
       </div>
 
     </section>
 
   </main>
 
+
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
+
     <div class="footer__brand">
-      <p class="footer__name">Freelancer Hub</p>
-      <p class="footer__tagline">Find talent. Build great things.</p>
+
+      <p class="footer__name">
+        Freelancer Hub
+      </p>
+
+      <p class="footer__tagline">
+        Find talent. Build great things.
+      </p>
+
     </div>
-    <p class="footer__copy">© 2026 Freelancer Hub</p>
+
+    <p class="footer__copy">
+      © 2026 Freelancer Hub
+    </p>
+
     <div class="footer__links">
       <a href="#">About</a>
       <a href="#">Contact</a>
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
     </div>
+
   </footer>
+  <script src="freelancer-dashboard.js"></script>
 
 </body>
 </html>

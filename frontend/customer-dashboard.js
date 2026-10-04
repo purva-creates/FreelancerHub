@@ -1,8 +1,9 @@
 const searchForm = document.querySelector(".search-bar");
 const searchInput = document.querySelector(".search-bar__input");
-
 const freelancers = [
+
     {
+        id: 1,
         name: "Neha Kulkarni",
         title: "Full Stack Developer",
         skills: ["Java", "React", "MySQL"],
@@ -10,7 +11,9 @@ const freelancers = [
         hourlyRate: 800,
         availability: "Available"
     },
+
     {
+        id: 2,
         name: "Arjun Mehta",
         title: "UI/UX Designer",
         skills: ["Figma", "UI/UX Design", "Photoshop"],
@@ -18,7 +21,9 @@ const freelancers = [
         hourlyRate: 1200,
         availability: "Available"
     },
+
     {
+        id: 3,
         name: "Riya Shah",
         title: "Digital Marketing Specialist",
         skills: ["SEO", "Social Media", "Google Ads"],
@@ -26,6 +31,7 @@ const freelancers = [
         hourlyRate: 600,
         availability: "Busy"
     }
+
 ];
 
 function displayFreelancers(results) {
@@ -89,7 +95,12 @@ function displayFreelancers(results) {
             </div>
 
             <div class="freelancer-card__actions">
-                <a href="freelancer-profile.html" class="btn-secondary btn-block">View Profile</a>
+               <a
+    href="freelancer-profile.html?id=${freelancer.id}"
+    class="btn-secondary btn-block"
+>
+    View Profile
+</a>
                 <a href="#" class="btn-primary btn-block">Message</a>
             </div>
         `;
